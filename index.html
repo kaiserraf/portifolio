@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaiserraf Dev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#top" class="brand">&lt;/kaiserraf&gt;</a>
+  <nav class="routes">
+    <a href="#sobre"><span class="verb verb-get">GET</span> /sobre</a>
+    <a href="#projetos"><span class="verb verb-get">GET</span> /projetos</a>
+    <a href="#contato"><span class="verb verb-post">POST</span> /contato</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="routes">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">// terminal.status = "disponível para novos projetos"</p>
+      <h1>Construo o backend<br>que sustenta a ideia.</h1>
+      <p class="lede">
+        Estudante de Engenharia de Software focado em aplicações back-end. Mais do que
+        desenvolver APIs bem estruturadas, acredito que o valor de um desenvolvedor é traduzir
+        as necessidades reais das pessoas em tecnologia. Acredito que o melhor código é aquele 
+        que resolve o problema do usuário de forma eficiente e inteligente
+      </p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+        <a href="#contato" class="btn btn-ghost">Falar comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /sobre <span class="status">200 OK</span></p>
+    <h2>Quem responde essa rota</h2>
+    <div class="about-grid">
+      <p class="about-text">
+        Meu nome é Rafael Machado, sou aluno de Engenharia de Software (4º Periodo) na UniBrasil.
+        Tenho forte interesse em desenvolvimento de software, especialmente na construção de backends
+        sólidos e eficientes. Gosto de transformar problemas reais em soluções técnológicas. Já atuei
+        no desenvolvimento de diversos sistemas do zero, como aplicativos de gestão para a Ponto 8 Oficina,
+        e a plataforma web UniCaronas
+      </p>
+      <div class="stack-groups">
+        <div class="stack-group">
+          <h3>Backend</h3>
+          <ul class="tags">
+            <li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li><li>Prisma</li><li>JWT</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Frontend</h3>
+          <ul class="tags">
+            <li>JavaScript</li><li>HTML</li><li>CSS</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Também uso</h3>
+          <ul class="tags">
+            <li>PHP</li><li>.NET</li><li>C#</li><li>Java</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /projetos <span class="status">200 OK</span></p>
+    <h2>O que já saiu do terminal</h2>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-head">
+          <span class="route"><span class="verb verb-get">GET</span> /projetos/ponto-8-webapp</span>
+          <span class="status">200 OK</span>
+        </div>
+        <h3>Ponto 8 WebApp</h3>
+        <p>
+            Sistema de gestão para oficina automotiva. Criado especialmente para
+            Ponto 8 Motors, o sistema conta com: autenticação JWT com rotação
+            de refresh token, criptografia de dados sensiveis, cadastro de clientes,
+            veículos e peças, e geração de ordens de serviço em PDF.
+        </p>
+        <ul class="tags small">
+          <li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li><li><a href="https://github.com/kaiserraf/ponto-8-webapp">Repositório</a></li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <span class="route"><span class="verb verb-get">GET</span> /projetos/unicaronas</span>
+          <span class="status">200 OK</span>
+        </div>
+        <h3>UniCaronas</h3>
+        <p>SaaS de caronas para universitários: chat em tempo real, gestão de
+          pedidos de carona, avaliações, caronas recorrentes e pagamento via Pix
+          com QR Code.</p>
+        <ul class="tags small">
+          <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Socket.io</li><li><a href="https://unicaronas-5qtg.vercel.app/index.html">Acesse aqui</a></li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <span class="route"><span class="verb verb-get">GET</span> /projetos/isis-passwords</span>
+          <span class="status">200 OK</span>
+        </div>
+        <h3>Isis Passwords</h3>
+        <p>Gerenciador de senhas com criptografia, autenticação via
+          JWT + refresh token opaco em cookie HTTP-only, e decriptação sob
+          demanda para manter a listagem segura. Criado especialmente para minha namorada</p>
+        <ul class="tags small">
+          <li>Node.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li><a href="https://github.com/kaiserraf/isis-passwords">Repositório</a></li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <span class="route"><span class="verb verb-get">GET</span> /projetos/gestao-ong</span>
+          <span class="status">200 OK</span>
+        </div>
+        <h3>Sistema de Feijoada Beneficente</h3>
+        <p>Ferramenta para uma ONG organizar suas feijoadas: venda e cadastro de
+          ingressos, comunicação entre recepção, caixa e cozinha, e relatórios de
+          vendas ao final do evento. Ainda em etapa de planejamento</p>
+        <ul class="tags small">
+          <!--<li>Node.js</li><li>PostgreSQL</li><li><a href="https://github.com/kaiserraf/isis-passwords">Ainda não disponivel</a></li>-->
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section section-contact">
+    <p class="eyebrow"><span class="verb verb-post">POST</span> /contato</p>
+    <h2>Envie uma requisição</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-links">
+        <a href="mailto:rafaelmachado2507@gmail.com" class="contact-link">
+          <span class="link-label">email</span>
+          <span class="link-value">rafaelmachado2507@gmail.com</span>
+        </a>
+        <a href="https://github.com/kaiserraf" class="contact-link" target="_blank" rel="noopener">
+          <span class="link-label">github</span>
+          <span class="link-value">github.com/kaiserraf</span>
+        </a>
+        <a href="https://www.linkedin.com/in/rafaelkaisermachado/" class="contact-link" target="_blank" rel="noopener">
+          <span class="link-label">linkedin</span>
+          <span class="link-value">in/rafaelkaisermachado/</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>// build feito com HTML, CSS e café — <span id="year"></span></p>
+</footer>
+
+<script>
+  // Ano dinâmico no rodapé
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Menu mobile
+  const navToggle = document.getElementById('navToggle');
+  const routes = document.querySelector('.routes');
+  navToggle.addEventListener('click', () => {
+    const isOpen = routes.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  routes.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      routes.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Reveal ao rolar a página
+  const revealEls = document.querySelectorAll('.section, .project-card');
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  }
+</script>
+
+</body>
+</html>
