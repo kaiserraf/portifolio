@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ponto 8 WebApp — Case Study</title>
+<meta name="description" content="Como construí o Ponto 8 WebApp: sistema de gestão para oficina automotiva com Node.js, TypeScript, Express e PostgreSQL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="case-study.css">
+<link rel="icon" type="image/png" href="icon.jpg">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="../index.html" class="brand">&lt;/kaiserraf&gt;</a>
+  <nav class="routes">
+    <a href="../index.html#projetos" class="breadcrumb">&larr; GET /projetos</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="case-hero">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /projetos/ponto-8</p>
+    <h1>Ponto 8 WebApp</h1>
+    <p class="lede">
+      Sistema de gestão para oficina automotiva, construída do zero, o projeto possui: autenticação de usuário, 
+      cadastros de clientes, peças e veiculos, geração de ordens de serviço em PDF e um frontend simplificado.
+    </p>
+
+    <div class="case-meta">
+      <div class="case-meta-item">
+        <span>Meu papel</span>
+        <ul class="tags small">
+          <li>Full Stack (projeto solo)</li>
+        </ul>
+      </div>
+      <div class="case-meta-item">
+        <span>Stack</span>
+        <ul class="tags small">
+          <li>Node.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Express</li>
+        </ul>
+      </div>
+      <div class="case-meta-item">
+        <span>Frontend</span>
+        <ul class="tags small">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-links">
+      <a href="https://github.com/kaiserraf/ponto-8-webapp" class="btn btn-ghost">Ver repositório</a>
+      <!--<a href="#" class="btn btn-ghost">Ver demo</a>-->
+    </div>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /desafio</p>
+    <h2>O problema</h2>
+    <p>
+      A oficina precisava de uma forma mais organizada de gerenciar clientes, veiculos, peças e ordens de serviço, 
+      mas a solução utilizada anteriormente era cara, complexa e possuía diversas funcionalidades que não faziam parte 
+      da rotina da equipe. Na pratica, isso tornava o sistema pouco intuitivo e dificultava sua adoção pelos funcionarios.
+    </p>
+    <p>
+      A proposta surgiu a partir de uma necessidade simples, ter apenas o que a oficina realmente precisa. O desafio era 
+      desenvolver uma aplicação completa, mas sem excesso de funcionalidades, adaptada ao fluxo de trabalho real da equipe
+      e capaz de acompanhar o serviço desde o cadastro do cliente e veículo até a finalização da ordem de serviço.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /o-que-fiz</p>
+    <h2>O que eu construí</h2>
+    <ul class="case-list">
+      <li>Autenticação completa com JWT e rotação de refresh token, garantindo sessões seguras sem exigir login constante.</li>
+      <li>Módulos de CRUD para clientes, veículos, peças e ordens de serviço, todos ligados entre si no banco de dados.</li>
+      <li>Geração de ordens de serviço em PDF com PDFKit, prontas para impressão ou envio ao cliente.</li>
+      <li>Criptografia de informações sensiveis tanto dos clientes, quanto dos veiculos.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /decisoes-tecnicas</p>
+    <h2>Decisões técnicas e aprendizados</h2>
+    <div class="case-cards">
+      <div class="case-card">
+        <h3>// bug — auth guard</h3>
+        <p>Depurei problemas de caminho no guard de autenticação e na forma como o Express servia os arquivos estáticos do frontend, garantindo que rotas protegidas realmente barrassem acesso não autenticado.</p>
+      </div>
+      <div class="case-card">
+        <h3>// bug — nomes de campo</h3>
+        <p>Descobri que ter divergencias nos nomes das tabelas e propriedades, causam erros no sistema, trazendo a necessidade do ORMs</p>
+      </div>
+      <div class="case-card">
+        <h3>// bug — exibição </h3>
+        <p>Resolvi bugs de exibição de <code>NaN</code> em campos numéricos e problemas de estado nos modais, que faziam a interface mostrar dados desatualizados ou inconsistentes.</p>
+      </div>
+      <div class="case-card">
+        <h3>// documentação</h3>
+        <p>Entendi a necessidade de uma boa documentação e por que cada funcionalidade no código deve ser explicada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /prints</p>
+    <h2>Telas do sistema</h2>
+    <div class="shot-grid">
+      <div class="shot"><img src="../img/ponto-8/dashboard-principal.png" alt="Dashboard do Ponto 8 WebApp"></div>
+      <div class="shot"><img src="../img/ponto-8/ordem-de-servico.png" alt="Ordem de Serviço"></div>
+      <div class="shot"><img src="../img/ponto-8/clientes.png" alt="Clientes"></div>
+      <div class="shot"><img src="../img/ponto-8/login.png" alt="Login"></div>
+      <div class="shot"><img src="../img/ponto-8/estoque.png" alt="Estoque"></div>
+      <div class="shot"><img src="../img/ponto-8/veiculos.png" alt="Veiculos"></div>
+    </div>
+    <!--
+      Quando tiver os prints, troque cada <div class="shot-placeholder">...</div> por:
+      <div class="shot"><img src="../img/ponto-8/dashboard.png" alt="Dashboard do Ponto 8 WebApp"></div>
+    -->
+  </section>
+
+  <nav class="case-nav">
+    <a href="../index.html#projetos" class="link-arrow">&larr; Todos os projetos</a>
+    <a href="unicaronas.html" class="link-arrow">Próximo: UniCaronas &rarr;</a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <p>// build feito com HTML, CSS e café — <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -61,7 +61,7 @@
 
   <!-- SOBRE -->
   <section id="sobre" class="section">
-    <p class="eyebrow"><span class="verb verb-get">GET</span> /sobre <span class="status">200 OK</span></p>
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /sobre</p>
     <h2>Quem responde essa rota</h2>
     <div class="about-grid">
       <p class="about-text">
@@ -75,19 +75,28 @@
         <div class="stack-group">
           <h3>Backend</h3>
           <ul class="tags">
-            <li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li><li>Prisma</li><li>JWT</li>
+            <li>Node.js</li><li>TypeScript</li><li>Express</li><li>JWT</li>
+          </ul>
+          <ul class="tags">
+            <li>PHP</li><li>.NET</li><li>Java</li><li>Prisma ORM</li>
           </ul>
         </div>
         <div class="stack-group">
-          <h3>Frontend</h3>
+          <h3>Frontend - Básico</h3>
           <ul class="tags">
             <li>JavaScript</li><li>HTML</li><li>CSS</li>
           </ul>
         </div>
         <div class="stack-group">
-          <h3>Também uso</h3>
+          <h3>Banco de Dados</h3>
           <ul class="tags">
-            <li>PHP</li><li>.NET</li><li>C#</li><li>Java</li>
+            <li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Cloud/DevOps</h3>
+          <ul class="tags">
+            <li>Azure Cloud Database</li><!--<li>Azure VPS</li><li>MySQL</li><li>SQL Server</li>-->
           </ul>
         </div>
       </div>
@@ -96,7 +105,7 @@
 
   <!-- PROJETOS -->
   <section id="projetos" class="section">
-    <p class="eyebrow"><span class="verb verb-get">GET</span> /projetos <span class="status">200 OK</span></p>
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /projetos</p>
     <h2>O que já saiu do terminal</h2>
 
     <div class="project-grid">
@@ -114,8 +123,10 @@
             veículos e peças, e geração de ordens de serviço em PDF.
         </p>
         <ul class="tags small">
-          <li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li><li><a href="https://github.com/kaiserraf/ponto-8-webapp">Repositório</a></li>
+          <li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li>
         </ul>
+        <a href="https://github.com/kaiserraf/ponto-8-webapp" class="btn btn-primary">Repositório</a>
+        <a href="ponto8.html" class="btn btn-ghost">Ver mais</a>
       </article>
 
       <article class="project-card">
@@ -128,8 +139,10 @@
           pedidos de carona, avaliações, caronas recorrentes e pagamento via Pix
           com QR Code.</p>
         <ul class="tags small">
-          <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Socket.io</li><li><a href="https://unicaronas-5qtg.vercel.app/index.html">Acesse aqui</a></li>
+          <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Socket.io</li>
         </ul>
+        <a href="https://github.com/arianearchanjo/unicaronas" class="btn btn-primary">Repositório</a>
+        <a href="unicaronas.html" class="btn btn-ghost">Ver mais</a>
       </article>
 
       <article class="project-card">
@@ -140,18 +153,20 @@
         <h3>Isis Passwords</h3>
         <p>Gerenciador de senhas com criptografia, autenticação via
           JWT + refresh token opaco em cookie HTTP-only, e decriptação sob
-          demanda para manter a listagem segura. Criado especialmente para minha namorada</p>
+          demanda para manter a listagem segura. Feito por demanda.</p>
         <ul class="tags small">
-          <li>Node.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li><a href="https://github.com/kaiserraf/isis-passwords">Repositório</a></li>
+          <li>Node.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li>
         </ul>
+        <a href="https://github.com/kaiserraf/isis-passwords" class="btn btn-primary">Repositório</a>
+        <a href="isis-passwords.html" class="btn btn-ghost">Ver mais</a>
       </article>
 
       <article class="project-card">
         <div class="project-head">
           <span class="route"><span class="verb verb-get">GET</span> /projetos/gestao-ong</span>
-          <span class="status">102 Processing</span>
+          <span class="status-process">102 Processing</span>
         </div>
-        <h3>Sistema de Feijoada Beneficente</h3>
+        <h3>GES - Gestão Encantando Sonhos</h3>
         <p>Ferramenta para uma ONG organizar suas feijoadas: venda e cadastro de
           ingressos, comunicação entre recepção, caixa e cozinha, e relatórios de
           vendas ao final do evento. Ainda em etapa de planejamento</p>
@@ -159,6 +174,7 @@
           <!--<li>Node.js</li><li>PostgreSQL</li><li><a href="https://github.com/kaiserraf/isis-passwords">Ainda não disponivel</a></li>-->
         </ul>
       </article>
+      
 
     </div>
   </section>

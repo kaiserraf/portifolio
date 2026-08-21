@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniCaronas — Case Study</title>
+<meta name="description" content="Como construí o UniCaronas: SaaS de caronas para universitários com chat em tempo real e pagamento via Pix.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="case-study.css">
+<link rel="icon" type="image/png" href="icon.jpg">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="../index.html" class="brand">&lt;/kaiserraf&gt;</a>
+  <nav class="routes">
+    <a href="../index.html#projetos" class="breadcrumb">&larr; GET /projetos</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="case-hero">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /projetos/unicaronas</p>
+    <h1>UniCaronas</h1>
+    <p class="lede">
+      SaaS de caronas para universitários, com chat em tempo real, gestão de
+      pedidos de carona e pagamento via Pix integrado.
+    </p>
+
+    <div class="case-meta">
+      <div class="case-meta-item">
+        <span>Meu papel</span>
+        <ul class="tags small">
+          <li>Product Owner</li>
+          <li>Backend</li>
+        </ul>
+      </div>
+      <div class="case-meta-item">
+        <span>Stack</span>
+        <ul class="tags small">
+          <li>Node.js</li><li>JavaScript</li><li>PostgreSQL</li><li>Express</li>
+        </ul>
+        <ul class="tags small">
+          <li>Socket.io</li>
+        </ul>
+      </div>
+      <div class="case-meta-item">
+        <span>Frontend</span>
+        <ul class="tags small">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-links">
+      <a href="https://github.com/arianearchanjo/unicaronas" class="btn btn-ghost">Ver repositório</a>
+      <a href="https://unicaronas-5qtg.vercel.app/index.html" class="btn btn-primary">Ver projeto</a>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /desafio</p>
+    <h2>O problema</h2>
+    <p>
+      O UniCaronas surgiu a partir de três problemas identificados entre os estudantes: 
+      muitos alunos precisavam se deslocar até a faculdade, mas moravam em regiões com 
+      difícil acesso ao transporte público; outros não possuíam veículo próprio; e, mesmo 
+      aqueles que possuíam, enfrentavam longas filas e congestionamentos nos horários de pico 
+      na UniBrasil. Diante desse cenário, foi idealizado o UniCaronas como uma solução para 
+      facilitar o deslocamento dos estudantes e conectar aqueles que ofereciam e precisavam de caronas.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /o-que-fiz</p>
+    <h2>O que eu construí</h2>
+    <ul class="case-list">
+      <li>Idealização geral do projeto e suas funcionalidades básicas</li>
+      <li>Definição e esclarecimento de requisitos para a equipe</li>
+      <li>Autenticação com JWT e refresh token, com bcrypt para o tratamento seguro de senhas.</li>
+      <li>Chat em tempo real entre motorista e passageiro</li>
+      <li>Fluxo completo de pedido e gestão de carona, incluindo caronas recorrentes e avaliações entre usuários.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /decisoes-tecnicas</p>
+    <h2>Decisões técnicas e aprendizados</h2>
+    <div class="case-cards">
+      <div class="case-card">
+        <h3>// bug — CORS</h3>
+        <p>Depurei uma configuração de CORS que bloqueava as requisições do frontend em ambiente de desenvolvimento, entendendo na prática como origin, métodos e headers permitidos se relacionam.</p>
+      </div>
+      <div class="case-card">
+        <h3>// bug — seed de dados</h3>
+        <p>Identifiquei corrupção de hash bcrypt nos dados de seed do banco, o que impedia logins de teste — reforçou a importância de gerar hashes em tempo de execução, não copiar valores fixos.</p>
+      </div>
+      <div class="case-card">
+        <h3>// arquitetura — desenho de sistema</h3>
+        <p>Aprendi regras para desenhar uma arquitetura de sistema, e a lógica existente por trás.</p>
+      </div>
+      <div class="case-card">
+        <h3>// arquitetura — chat</h3>
+        <p>Desenhei a arquitetura do chat em tempo real, incluindo notificações de pedido de carona para motoristas, e comparei na prática Socket.io contra uma versão via polling.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <p class="eyebrow"><span class="verb verb-get">GET</span> /prints</p>
+    <h2>Telas do sistema</h2>
+    <div class="shot-grid">
+      <div class="shot"><img src="../img/unicaronas/cadastro-usuario.png" alt="Cadastro"></div>
+      <div class="shot"><img src="../img/unicaronas/dashboard.png" alt="dashboard"></div>
+      <div class="shot"><img src="../img/unicaronas/nova-carona.png" alt="nova carona"></div>
+      <div class="shot"><img src="../img/unicaronas/perfil.png" alt="perfil"></div>
+    </div>
+    <!--
+      Quando tiver os prints, troque cada <div class="shot-placeholder">...</div> por:
+      <div class="shot"><img src="../img/unicaronas/home.png" alt="Tela inicial do UniCaronas"></div>
+    -->
+  </section>
+
+  <nav class="case-nav">
+    <a href="ponto8.html" class="link-arrow">&larr; Ponto 8 WebApp</a>
+    <a href="isis-passwords.html" class="link-arrow">Próximo: Isis Passwords &rarr;</a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <p>// build feito com HTML, CSS e café — <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
