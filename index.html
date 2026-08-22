@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <meta name="description" content="Portfólio de Rafael Machado — estudante de Engenharia de Software na UniBrasil, focado em backends com Node.js, TypeScript, Express e PostgreSQL.">
 
 <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
@@ -15,15 +15,15 @@
 <meta property="og:title" content="Kaiserraf Dev — Rafael Machado">
 <meta property="og:description" content="Estudante de Engenharia de Software focado em back-end. Confira projetos como Ponto 8 WebApp, UniCaronas e Isis Passwords.">
 <meta property="og:url" content="https://kaiserraf.github.io/portifolio/">
-<meta property="og:image" content="https://kaiserraf.github.io/portifolio/og-image.png">
+<meta property="og:image" content="https://kaiserraf.github.io/portifolio/assets/img/icon.jpg">
 
 <!-- Twitter/X card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kaiserraf Dev — Rafael Machado">
 <meta name="twitter:description" content="Estudante de Engenharia de Software focado em back-end. Confira projetos como Ponto 8 WebApp, UniCaronas e Isis Passwords.">
-<meta name="twitter:image" content="https://kaiserraf.github.io/portifolio/og-image.png">
+<meta name="twitter:image" content="https://kaiserraf.github.io/portifolio/assets/img/icon.jpg">
 
-<link rel="icon" type="image/png" href="icon.jpg">
+<link rel="icon" type="image/jpeg" href="assets/img/icon.jpg">
 </head>
 <body>
 
@@ -126,7 +126,7 @@
           <li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li>
         </ul>
         <a href="https://github.com/kaiserraf/ponto-8-webapp" class="btn btn-primary">Repositório</a>
-        <a href="ponto8.html" class="btn btn-ghost">Ver mais</a>
+        <a href="pages/ponto-8.html" class="btn btn-ghost">Ver mais</a>
       </article>
 
       <article class="project-card">
@@ -142,7 +142,7 @@
           <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Socket.io</li>
         </ul>
         <a href="https://github.com/arianearchanjo/unicaronas" class="btn btn-primary">Repositório</a>
-        <a href="unicaronas.html" class="btn btn-ghost">Ver mais</a>
+        <a href="pages/unicaronas.html" class="btn btn-ghost">Ver mais</a>
       </article>
 
       <article class="project-card">
@@ -158,7 +158,7 @@
           <li>Node.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li>
         </ul>
         <a href="https://github.com/kaiserraf/isis-passwords" class="btn btn-primary">Repositório</a>
-        <a href="isis-passwords.html" class="btn btn-ghost">Ver mais</a>
+        <a href="pages/isis-passwords.html" class="btn btn-ghost">Ver mais</a>
       </article>
 
       <article class="project-card">
@@ -209,41 +209,7 @@
   <p>// build feito com HTML, CSS e café — <span id="year"></span></p>
 </footer>
 
-<script>
-  // Ano dinâmico no rodapé
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Menu mobile
-  const navToggle = document.getElementById('navToggle');
-  const routes = document.querySelector('.routes');
-  navToggle.addEventListener('click', () => {
-    const isOpen = routes.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-  routes.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      routes.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  // Reveal ao rolar a página
-  const revealEls = document.querySelectorAll('.section, .project-card');
-  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => {
-      el.classList.add('reveal');
-      observer.observe(el);
-    });
-  }
-</script>
+<script src="assets/js/main.js" defer></script>
 
 </body>
 </html>

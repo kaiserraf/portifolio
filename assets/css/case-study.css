@@ -172,6 +172,14 @@
   flex-wrap: wrap;
 }
 
+.link-arrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--mist);
+  transition: color 0.15s ease;
+}
+.link-arrow:hover { color: var(--white); }
+
 @media (max-width: 640px) {
   .shot-grid { grid-template-columns: 1fr; }
   .shot-grid .shot-wide { grid-column: auto; }
